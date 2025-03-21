@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meet The Team</title>
+    <style>
+        ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+  color: #000000;
+}
+
+input,
+textarea,
+button,
+select,
+a {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+img {
+  width: 100%;
+  max-width: 100%;
+}
+
+section {
+  padding: 5rem 0;
+}
+
+.container {
+  width: 100%;
+  padding: 0 1.5rem;
+  max-width: 144rem;
+  margin: 0 ;
+}
+
+.w-120 {
+  max-width: 120rem;
+}
+
+.w-105 {
+  max-width: 105rem;
+}
+
+.btn {
+  border-radius: .5rem;
+  padding: 1.2rem;
+}
+
+/*Header */
+header {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+}
+
+.header__nav {
+  padding: 1% 1% 1% 1%;
+  display: flex;
+  align-items: center;
+  
+}
+
+.header__logo {
+  flex: 2;
+}
+#imm{
+  margin-top: 40%;
+  padding-top: 50%;
+  width: 200px
+}
+.header__logo img {
+  max-width: 12rem;
+}
+
+.header__nav__content {
+  flex: 8;
+  display: flex;
+  align-items: center;
+}
+
+.header__nav__content.open {
+  transform: translateX(0);
+}
+
+.header__menu {
+  flex: 4;
+  display: flex;
+  grid-gap: 2.5rem;
+}
+
+.menu__link {
+  cursor: pointer;
+  transition: .2s all;
+}
+
+.menu__link:hover {
+  color: #66BB6A;
+}
+
+.menu__link.active {
+  color: #66BB6A;
+  font-weight: bold;
+}
+
+.header__signup {
+  flex: 4;
+  display: flex;
+  justify-content: flex-end;
+}
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f8f8f8;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 900px;
+            margin: 50px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            margin-bottom: 10px;
+        }
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 20px;
+            padding: 20px;
+        }
+        .team-member {
+            text-align: center;
+            padding: 10px;
+            border-radius: 10px;
+            background: #fff;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+        .team-member img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 10px;
+        }
+        .role {
+            font-weight: bold;
+            color: #555;
+        }
+        .grid-4 {
+            grid-template-columns: repeat(4, 1fr);
+        }
+        .professor {
+            grid-column: 5 / 6;
+            justify-self: end;
+        }
+    </style>
+</head>
+<body>
+   
+        <nav class="header__nav w-120">
+            <div class="header__logo">
+                <img src="assets/img/logodrone.png" alt="Logo">
+            </div>
+            <div class="header__nav__content">
+                <div class="nav-close-icon"></div>
+                <ul class="header__menu">
+                    <li class="menu__item">
+                        <a href="index.html" class="menu__link active">Accueil</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="produit.html" class="menu__link">Produit</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="team.html" class="menu__link">Equipe</a>
+                    </li>
+                    
+                    <li class="menu__item">
+                        <a href="formulaire.html" class="menu__link">Contact</a>
+                    </li>
+                </ul>
+                
+            </div>
+            
+
+           
+        </nav>
+  
+    <div class="container">
+        <br><br><br><br><br>
+        <h1>Découvrer notre equipe</h1>
+            <h3> passionée de ce projet innovant</h3>
+        <center> <div class="team-grid">
+            
+            <div class="team-member">
+                <img src="assets/img/photo team/salemm.jpg" alt="Avery Davis">
+                <h3>Salmen Derbel</h3>
+                
+            </div>
+            <div class="team-member">
+                <img src="assets/img/photo team/dhia.jpg" alt="Cahaya Dewi">
+                <h3>DhiaEddine Mahdi</h3>
+                
+            </div>
+            <div class="team-member">
+                <img src="assets/img/photo team/maissa.jpg" alt="Olivia Wilson">
+                <h3>Maissa Derbel</h3>
+            
+            </div>
+            <div class="team-member">
+                <img src="assets/img/photo team/IMG_2599.png" alt="Sacha Dubois">
+                <h3>Youssef Rebai</h3>
+                
+            </div>
+            <div class="team-member">
+                <img src="assets/img/photo team/ahmed abid.jpg" alt="Chiaki Sato">
+                <h3>Ahmed Abid</h3>
+               
+            </div>
+        </div>
+        <div class="team-grid grid-4">
+            <div class="team-member">
+                <img src="assets/img/photo team/hedi zouari.jpg" alt="Juliana Silva">
+                <h3>Hedi Zouari</h3>
+                
+            </div>
+            <div class="team-member">
+                <img src="assets/img/photo team/maryem.png" alt="Member 7">
+                <h3>Eya Sahnoun</h3>
+                
+            </div>
+            <div class="team-member">
+                <img src="avatar8.jpg" alt="Member 8">
+                <h3>Mariem .....</h3>
+                
+            </div>
+            
+        </div></center>
+        <div class="team-grid">
+            <div class="team-member professor">
+                <img src="assets/img/mme hejer.jpg" alt="Professor">
+                <h3>Prof Encadrante</h3>
+                
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+

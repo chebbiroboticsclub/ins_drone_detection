@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire d'Agriculture</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('assets/img/BG\ SIGN-IN.png'); /* Remplace 'image.jpg' par le chemin de ton image */
+            background-size: cover; /* Ajuste l'image pour couvrir tout l'écran */
+            background-position: center; /* Centre l'image */
+            background-repeat: no-repeat; /* Empêche la répétition de l'image */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 20px;
+        }
+        .container {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+            width: 500px;
+            margin: 20px;
+            margin-left: -150px;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 14px;
+            margin: 12px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        textarea {
+            height: 120px;
+        }
+        button {
+            width: 100%;
+            padding: 14px;
+            background: green;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+        }
+        button:hover {
+            background: darkgreen;
+        }
+        .message {
+            margin-top: 12px;
+            color: green;
+        }
+
+    </style>
+</head>
+<body>
+    <nav class="header__nav w-120">
+        <div class="header__logo">
+            <img src="assets/img/logodrone.png" alt="Logo">
+        </div>
+        <div class="header__nav__content">
+            <div class="nav-close-icon"></div>
+            <ul class="header__menu">
+                <li class="menu__item">
+                    <a href="index.html" class="menu__link active">Accueil</a>
+                </li>
+                <li class="menu__item">
+                    <a href="produit.html" class="menu__link">Produit</a>
+                </li>
+                <li class="menu__item">
+                    <a href="team.html" class="menu__link">Equipe</a>
+                </li>
+                
+                <li class="menu__item">
+                    <a href="formulaire.html" class="menu__link">Contact</a>
+                </li>
+            </ul>
+            
+        </div>
+        
+
+        <div class="hamburger-menu-wrap">
+            <div class="hamburger-menu">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <h2>Rejoignez Notre Communauté Agricole</h2>
+        <form id="agricultureForm">
+            <input type="text" id="nom" placeholder="Nom du fermier" required>
+            <input type="text" id="prenom" placeholder="Prénom du fermier" required>
+            <input type="text" id="region" placeholder="adresse de la ferme" required>
+            <input type="number" id="aire" placeholder="surface de la ferme (hectares)" required min="1">
+            <select id="culture" required>
+                <option value="">Type de culture</option>
+                <option value="Céréales">Céréales</option>
+                <option value="Légumes">Légumes</option>
+                <option value="Fruits">Fruits</option>
+            </select>
+            <textarea id="probleme" placeholder="Description du problème rencontré" required></textarea>
+            <button type="submit">Envoyer</button>
+            <p class="message" id="message"></p>
+        </form>
+    </div>
+    <script>
+        document.getElementById("agricultureForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            
+            let nom = document.getElementById("nom").value;
+            let prenom = document.getElementById("prenom").value;
+            let region = document.getElementById("region").value;
+            let aire = document.getElementById("aire").value;
+            let culture = document.getElementById("culture").value;
+            let probleme = document.getElementById("probleme").value;
+            
+            if (nom === "" || prenom === "" || region === "" || aire === "" || culture === "" || probleme === "") {
+                alert("Veuillez remplir tous les champs obligatoires.");
+                return;
+            }
+            
+            if (aire <= 0) {
+                alert("L'aire de la ferme doit être un nombre positif.");
+                return;
+            }
+            
+            document.getElementById("message").textContent = "Formulaire soumis avec succès !";
+            
+            document.getElementById("agricultureForm").reset();
+            setTimeout(function() {
+                window.location.href = "index.html";
+            }, 2000);
+        });
+        
+    </script>
+</body>
+</html>
